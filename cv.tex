@@ -1,6 +1,21 @@
 \documentclass{article}
 \title{CV}
 \author{}
+
+\usepackage[a4paper, margin=1in, lmargin=1.25in]{geometry}
+\usepackage{titlesec}
+
+\titleformat{\section}{\huge}{}{0em}{}[\titlerule]
+
+\titleformat{\subsection}{\large}{}{0em}{}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}{}{0em}{}
+
+\titlespacing*{\section}{-0.25in}{1em}{1em}
+\titlespacing*{\subsection}{-0.25in}{1em}{1em}
+\titlespacing*{\subsubsection}{-0.25in}{0.5em}{0.5em}
+
 \begin{document}
-\section{hello world}
+\input{./content.tex}
 \end{document}
