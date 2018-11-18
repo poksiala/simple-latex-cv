@@ -1,6 +1,8 @@
 \documentclass{article}
 \title{CV}
-\author{}
+\author{Your Name}
+\newcommand{\contactinformation}
+{your.email@example.com --- example.com}
 
 \usepackage[a4paper, margin=1in, lmargin=1.25in]{geometry}
 \usepackage{titlesec}
@@ -16,6 +18,23 @@
 \titlespacing*{\subsection}{-0.25in}{1em}{1em}
 \titlespacing*{\subsubsection}{-0.25in}{0.5em}{0.5em}
 
+\makeatletter
+    \def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title\space - \@author \par}%
+    {\small \contactinformation}
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\makeatother
+
 \begin{document}
+\maketitle
+\thispagestyle{empty}
+
 \input{./content.tex}
 \end{document}
